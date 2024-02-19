@@ -7,7 +7,6 @@ export const useSubmitTask = (task : InputTask) => {
     api.post('/task/store', task)
       .then((response) => {
         console.log(response);
-        window.location.reload();
       })
       .catch((error) => {
         console.error(error);

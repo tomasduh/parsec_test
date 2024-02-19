@@ -37,7 +37,7 @@ const init = async () => {
       try {
         const { content } = r.payload as { content: string };
         await db.raw('insert into tasks (content) values (?)', [content]);
-        return h.response().code(200);
+        return h.response().code(201);
       } catch (error) {
         console.error(error);
         return h.response().code(500);
